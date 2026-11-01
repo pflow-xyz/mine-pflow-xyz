@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mine.pflow.xyz: see how your process really runs</title>
+<meta name="description" content="Give it an event log. Get back a map of the process as it actually ran, and a report of where the work left it. In development.">
+<link rel="canonical" href="https://mine.pflow.xyz/">
+<meta property="og:title" content="See how your process really runs">
+<meta property="og:description" content="Give it an event log. Get back a map of the process as it actually ran, and a report of where the work left it.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mine.pflow.xyz/">
+<style>
+  :root {
+    color-scheme: dark;
+    /* pflow's shared brand palette. */
+    --bg: #1C1C1D;
+    --card: #2a2a2b;
+    --ink: #ffffff;
+    --muted: #b3b3b3;
+    --accent: #EBFF00;
+    --border: #333333;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 17px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 860px; margin: 0 auto; padding: 72px 16px 32px; }
+  .mark { color: var(--accent); font-weight: 600; letter-spacing: .02em; margin: 0 0 40px; }
+  h1 { font-size: clamp(2.1rem, 6vw, 3.2rem); line-height: 1.1; margin: 0 0 20px; }
+  .lede { font-size: 1.2rem; color: var(--muted); max-width: 40em; margin: 0 0 48px; }
+  .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); margin: 0 0 48px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; }
+  .card h2 { font-size: .8rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin: 0 0 4px; }
+  .card h3 { font-size: 1.1rem; margin: 0 0 8px; }
+  .card p { margin: 0; color: var(--muted); font-size: .97rem; }
+  section > h2 { font-size: 1.25rem; margin: 0 0 8px; }
+  section { margin: 0 0 40px; }
+  section p { margin: 0; color: var(--muted); max-width: 40em; }
+  a { color: var(--accent); }
+  footer { max-width: 860px; margin: 0 auto; padding: 24px 16px 56px; color: var(--muted); font-size: .9rem; border-top: 1px solid var(--border); }
+</style>
+</head>
+<body>
+<main>
+  <p class="mark">mine.pflow.xyz</p>
+  <h1>See how your process really runs.</h1>
+  <p class="lede">Give it an event log from any system that records what happened and when. Get back a map of the process as it actually ran, and a report of where the work left it.</p>
+
+  <div class="grid">
+    <div class="card">
+      <h2>You give it</h2>
+      <h3>An event log</h3>
+      <p>XES or CSV. Each row says which case, which step and when.</p>
+    </div>
+    <div class="card">
+      <h2>You get back</h2>
+      <h3>The real process</h3>
+      <p>A process map discovered from your data: the common paths, the rare ones and the loops.</p>
+    </div>
+    <div class="card">
+      <h2>You get back</h2>
+      <h3>Where it went off course</h3>
+      <p>How many cases fit the process you expect, which ones did not, and how far off they were.</p>
+    </div>
+  </div>
+
+  <section>
+    <h2>Ask from your AI assistant</h2>
+    <p>This is being built as an MCP server, so Claude or another MCP client can read a log and answer questions like "which orders skipped approval?" with evidence from the log.</p>
+  </section>
+
+  <section>
+    <h2>Status</h2>
+    <p>Early. This page is all that runs here today, and nothing above works yet. The first release is laid out in the <a href="https://github.com/pflow-xyz/mine-pflow-xyz/blob/main/ROADMAP.md">roadmap</a>.</p>
+  </section>
+</main>
+<footer>
+  Part of <a href="https://pflow.xyz">pflow</a>. Open source under the MIT license: <a href="https://github.com/pflow-xyz/mine-pflow-xyz">source on GitHub</a>.
+</footer>
+</body>
+</html>
